@@ -22,7 +22,18 @@ public class WebScraper {
         return contents;
     }
 
-    public static void main(String[] unused) {
-        System.out.println(urlToString("http://erdani.com/tdpl/hamlet.txt"));
+    public static int wordCounter(String input) {
+        if (input == null || input.isEmpty()) {
+            return 0;
+        }
+        String[] words = input.split();
+        return words.length;
     }
+}
+
+    public static void main(String[] unused) {
+        System.out.println(urlToString("https://cs.illinois.edu/"));
+        System.out.println(urlToString("http://erdani.com/tdpl/hamlet.txt"));
+        System.out.println(urlToString("https://www.bls.gov/tus/charts/chart9.txt"));
+        System.out.println(urlToString("http://tgftp.nws.noaa.gov/data/raw/fz/fzus53.klot.srf.lot.txt"));
 }
